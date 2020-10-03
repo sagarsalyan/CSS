@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        margin:0;
+        padding:0;
+        display:flex;
+        justify-content:center;
+        height:100vh;
+        align-items:center;
+      }
+      a{
+        text-decoration:none;
+        font-size:16px;
+        color:black;
+      }
+      .tooltip{
+        position:relative;
+      }
+      .tip{
+        position:absolute;
+        display:none;
+        top:0%;
+        left:110%;
+        padding:2px 7px;
+        border-radius:10px;
+        background:black;
+        color:white;
+        transition: 1s;
+      }
+      .tip:before{
+        content:"";
+        position:absolute;
+        left:-15%;
+        top:30%;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+      }
+      .tooltip:hover .tip{
+        display:block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tooltip">
+      <a href="#" class="hover">Hover Me</a>
+      <span class="tip">Tooltip</span>
+    </div>
+  </body>
+</html>

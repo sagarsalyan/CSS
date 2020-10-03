@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        margin: 0;
+        padding: 0;
+
+      }
+      .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotateX(70deg);
+      }
+      .ripple{
+        position: fixed;
+        top: 0;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        animation: ripple 4s linear infinite;
+      }
+      .r2{
+        animation-delay: 0.8s;
+      }
+      .r3{
+        animation-delay: 1.6s;
+      }
+      .r4{
+        animation-delay: 2.4s;
+      }
+      .r5{
+        animation-delay: 3.2s;
+      }
+      .r6{
+        animation-delay: 4s;
+      }
+      @keyframes ripple {
+        from{
+          border: 4px solid #4fd138;
+          background: #2fd13870;
+        }
+        to{
+          border: 4px solid #4fd138;
+          background: #2fd13870;
+          width: 400px;
+          height: 400px;
+          top: 20px;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="ripple r1"></span>
+      <span class="ripple r2"></span>
+      <span class="ripple r3"></span>
+      <span class="ripple r4"></span>
+      <span class="ripple r5"></span>
+      <span class="ripple r6"></span>
+    </div>
+  </body>
+</html>
